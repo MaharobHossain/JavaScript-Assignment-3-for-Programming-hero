@@ -18,5 +18,7 @@ function calculateMoney(ticketSale) {
 
 }
 
-let todayTicketSale = calculateMoney(-15);
+let todayTicketSale = calculateMoney(10);
+// let todayTicketSale = calculateMoney(-15);
+// let todayTicketSale = calculateMoney(1055);
 console.log("Today Baker Mama Profit:", todayTicketSale);
