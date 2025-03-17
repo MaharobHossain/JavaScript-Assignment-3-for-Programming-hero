@@ -34,3 +34,34 @@
 
 // // (You have to write your code here)
 // }
+
+
+
+
+
+function calculateMoney(ticketSale) {
+
+    if (ticketSale < 0) {
+        return "Invalid Number";
+    }
+
+    const ticketPrice = 120;
+  
+    const securityCost = 500;
+  
+    const staffLunchCost = 50 * 8;
+
+    const totalIncome = ticketSale * ticketPrice;
+
+    const totalExpense = securityCost + staffLunchCost;
+
+    const remainingMoney = totalIncome - totalExpense;
+
+    return remainingMoney;
+}
+
+console.log(calculateMoney(10)); // 300
+console.log(calculateMoney(1055)); // 125700
+console.log(calculateMoney(93)); // 10260
+console.log(calculateMoney(-130)); // "Invalid Number"
+console.log(calculateMoney(0)); // "Invalid Number"
