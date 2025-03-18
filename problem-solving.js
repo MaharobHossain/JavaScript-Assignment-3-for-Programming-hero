@@ -74,3 +74,30 @@ function deleteInvalids(arr) {
    //let arrayNumber = deleteInvalids(["1", { num: 2 }, NaN]);
    //let arrayNumber = deleteInvalids([1, 2, -3]);
    console.log("The Array Number is:", arrayNumber);
+
+
+
+
+
+
+
+
+
+   //  Problem 04 : Make A Great Password
+
+   function password(obj) {
+
+    if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
+        return "invalid";
+    }
+
+    let formattedSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
+
+    return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
+}
+
+console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); // Google#kolimuddin@1999
+console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); // Facebook#rahat@2002
+console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" })); // invalid
+console.log(password({ name: "maisha", birthYear: 2002 })); // invalid
+console.log(password({ birthYear: 2002, siteName: "Facebook" })); // invalid
