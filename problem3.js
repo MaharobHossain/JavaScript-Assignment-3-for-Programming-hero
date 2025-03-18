@@ -31,3 +31,40 @@
 // function deleteInvalids(array) {
 //     // You have to write your code here
 // }
+
+
+
+
+
+
+// function deleteInvalids(array) {
+//     // চেক করবো ইনপুট আসলেই একটি অ্যারে কিনা
+//     if (!Array.isArray(array)) {
+//         return "Invalid Array"; // যদি অ্যারে না হয়, তাহলে এরর মেসেজ রিটার্ন করবো
+//     }
+
+//     // ফিল্টার করে শুধুমাত্র সংখ্যাগুলো (যা NaN নয়) বের করে নেবো
+//     return array.filter(item => typeof item === "number" && !isNaN(item));
+// }
+
+// // টেস্ট কেস
+// console.log(deleteInvalids([1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }])); // [1, 18, -19]
+// console.log(deleteInvalids(["1", { num: 2 }, NaN])); // []
+// console.log(deleteInvalids([1, 2, -3])); // [1, 2, -3]
+// console.log(deleteInvalids({ num: [1, 2, 3] })); // "Invalid Array"
+
+
+function deleteInvalids(arr) {
+    if(!Array.isArray(arr)){
+        return "Invalid Array";
+    }
+    
+    let findArrayNumber = arr.filter(item => typeof item === "number" && !isNaN(item));
+    return findArrayNumber;
+ }
+
+   let arrayNumber = deleteInvalids([3, 8, 36, 37, NaN, undefined, true, false, 73, 99]);
+   //let arrayNumber = deleteInvalids({ num: [1, 2, 3] });
+   //let arrayNumber = deleteInvalids(["1", { num: 2 }, NaN]);
+   //let arrayNumber = deleteInvalids([1, 2, -3]);
+   console.log("The Array Number is:", arrayNumber);
