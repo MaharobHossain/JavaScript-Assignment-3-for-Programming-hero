@@ -39,3 +39,30 @@
 //     //write your code here
 //     }
 
+
+
+
+
+
+
+
+
+function password(obj) {
+    // Check if all required properties exist and birthYear is a 4-digit number
+    if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
+        return "invalid";
+    }
+
+    // Capitalize the first letter of siteName
+    let formattedSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
+
+    // Generate the password
+    return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
+}
+
+// ✅ Test Cases:
+console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); // Google#kolimuddin@1999
+console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); // Facebook#rahat@2002
+console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" })); // invalid
+console.log(password({ name: "maisha", birthYear: 2002 })); // invalid
+console.log(password({ birthYear: 2002, siteName: "Facebook" })); // invalid
