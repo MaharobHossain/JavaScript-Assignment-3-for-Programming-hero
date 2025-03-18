@@ -26,6 +26,11 @@ console.log("Today Baker Mama Profit:", todayTicketSale);
 
 
 
+
+
+
+
+
 //  Problem-02: Good Name , Bad Name
 
 function checkName(name) {
