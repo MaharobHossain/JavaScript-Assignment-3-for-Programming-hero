@@ -52,3 +52,25 @@ function checkName(name) {
 let findNameResult = checkName(["Rashed"]);
 console.log(findNameResult);
 
+
+
+
+
+
+//    Problem 03 : Virus in my Array
+
+
+function deleteInvalids(arr) {
+    if(!Array.isArray(arr)){
+        return "Invalid Array";
+    }
+    
+    let findArrayNumber = arr.filter(item => typeof item === "number" && !isNaN(item));
+    return findArrayNumber;
+ }
+
+   let arrayNumber = deleteInvalids([3, 8, 36, 37, NaN, undefined, true, false, 73, 99]);
+   //let arrayNumber = deleteInvalids({ num: [1, 2, 3] });
+   //let arrayNumber = deleteInvalids(["1", { num: 2 }, NaN]);
+   //let arrayNumber = deleteInvalids([1, 2, -3]);
+   console.log("The Array Number is:", arrayNumber);
