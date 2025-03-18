@@ -1,6 +1,4 @@
 
-//     Problem-01: Help The Zoo Manager
-
 function calculateMoney(ticketSale) {
     if( ticketSale < 0 ){
         return "Baker mama ajke mara khaico, sudhu loss e loss :("
@@ -18,20 +16,8 @@ function calculateMoney(ticketSale) {
 
 }
 
-let todayTicketSale = calculateMoney(10);
-// let todayTicketSale = calculateMoney(-15);
-// let todayTicketSale = calculateMoney(1055);
-console.log("Today Baker Mama Profit:", todayTicketSale);
 
 
-
-
-
-
-
-
-
-//  Problem-02: Good Name , Bad Name
 
 function checkName(name) {
 
@@ -45,19 +31,7 @@ function checkName(name) {
     return findGoodCharector;
 }
 
-// let findNameResult = checkName("Salman");
-// let findNameResult = checkName("RAFEE");
-// let findNameResult = checkName("Jhankar");
-//let findNameResult = checkName(98765);
-let findNameResult = checkName(["Rashed"]);
-console.log(findNameResult);
 
-
-
-
-
-
-//    Problem 03 : Virus in my Array
 
 
 function deleteInvalids(arr) {
@@ -69,21 +43,8 @@ function deleteInvalids(arr) {
     return findArrayNumber;
  }
 
-   let arrayNumber = deleteInvalids([3, 8, 36, 37, NaN, undefined, true, false, 73, 99]);
-   //let arrayNumber = deleteInvalids({ num: [1, 2, 3] });
-   //let arrayNumber = deleteInvalids(["1", { num: 2 }, NaN]);
-   //let arrayNumber = deleteInvalids([1, 2, -3]);
-   console.log("The Array Number is:", arrayNumber);
 
 
-
-
-
-
-
-
-
-   //  Problem 04 : Make A Great Password
 
    function password(obj) {
 
@@ -96,19 +57,8 @@ function deleteInvalids(arr) {
     return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
 }
 
-console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); 
-console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); 
-console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }));
-console.log(password({ name: "maisha", birthYear: 2002 })); 
-console.log(password({ birthYear: 2002, siteName: "Facebook" })); 
 
 
-
-
-
-
-
-//     Problem 05 : Monthly Savings of a Freelancer
 
 function monthlySavings(arr, livingCost) {
 
@@ -129,9 +79,3 @@ function monthlySavings(arr, livingCost) {
 
     return savings >= 0 ? savings : "earn more";
 }
-
-console.log(monthlySavings([1000, 2000, 3000], 5400)); 
-console.log(monthlySavings([1000, 2000, 2500], 5000)); 
-console.log(monthlySavings([900, 2700, 3400], 10000)); 
-console.log(monthlySavings(100, [900, 2700, 3400])); 
-console.log(monthlySavings([5000, 2000, 3500], 7000)); 
