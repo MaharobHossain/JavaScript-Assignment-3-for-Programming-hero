@@ -40,3 +40,48 @@
 
 // // You have to write your code here
 // }
+
+
+
+
+
+
+
+// function monthlySavings(arr, livingCost) {
+//     // ইনপুট চেক: প্রথম ইনপুট অ্যারে এবং দ্বিতীয় ইনপুট নাম্বার কিনা
+//     if (!Array.isArray(arr) || typeof livingCost !== "number") {
+//         return "invalid input";
+//     }
+
+//     // মোট আয় এবং ট্যাক্স হিসাব করা
+//     let totalIncome = 0;
+//     for (let amount of arr) {
+//         if (amount >= 3000) {
+//             totalIncome += amount * 0.8; // ২০% ট্যাক্স কাটা হবে
+//         } else {
+//             totalIncome += amount;
+//         }
+//     }
+
+//     // সেভিংস বের করা
+//     let savings = totalIncome - livingCost;
+
+//     // যদি সেভিংস ০ বা বেশি হয়, তাহলে সেটাই রিটার্ন করবে, নাহলে "earn more"
+//     return savings >= 0 ? savings : "earn more";
+// }
+
+// // ✅ **টেস্ট কেস চালাই:**
+// console.log(monthlySavings([1000, 2000, 3000], 5400)); 
+// // Output: 0
+
+// console.log(monthlySavings([1000, 2000, 2500], 5000)); 
+// // Output: 500
+
+// console.log(monthlySavings([900, 2700, 3400], 10000)); 
+// // Output: "earn more"
+
+// console.log(monthlySavings(100, [900, 2700, 3400])); 
+// // Output: "invalid input"
+
+// console.log(monthlySavings([5000, 2000, 3500], 7000)); 
+// // Output: 4600
