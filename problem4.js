@@ -46,23 +46,57 @@
 
 
 
+// function password(obj) {
+//     // চেক করব ইনপুট অবজেক্টে প্রয়োজনীয় প্রপার্টি আছে কিনা এবং birthYear ৪ ডিজিটের কিনা
+//     if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
+//         return "invalid";
+//     }
+
+//     // siteName এর প্রথম অক্ষর বড় হাতের (Uppercase) করব
+//     let formattedSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
+
+//     // ফরম্যাট অনুযায়ী পাসওয়ার্ড তৈরি করব
+//     return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
+// }
+
+// // ✅ **টেস্ট কেস চালিয়ে দেখি:**
+// console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); 
+// // Output: Google#kolimuddin@1999
+
+// console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); 
+// // Output: Facebook#rahat@2002
+
+// console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" })); 
+// // Output: invalid
+
+// console.log(password({ name: "maisha", birthYear: 2002 })); 
+// // Output: invalid
+
+// console.log(password({ birthYear: 2002, siteName: "Facebook" })); 
+// // Output: invalid
+
+
+
+
+
+
+
 
 function password(obj) {
-    // Check if all required properties exist and birthYear is a 4-digit number
+
     if (!obj.name || !obj.birthYear || !obj.siteName || obj.birthYear.toString().length !== 4) {
         return "invalid";
     }
 
-    // Capitalize the first letter of siteName
     let formattedSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
 
-    // Generate the password
     return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
 }
 
-// ✅ Test Cases:
 console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); // Google#kolimuddin@1999
 console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); // Facebook#rahat@2002
 console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" })); // invalid
 console.log(password({ name: "maisha", birthYear: 2002 })); // invalid
 console.log(password({ birthYear: 2002, siteName: "Facebook" })); // invalid
+
+
