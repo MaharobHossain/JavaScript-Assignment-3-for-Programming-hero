@@ -96,8 +96,42 @@ function deleteInvalids(arr) {
     return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
 }
 
-console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); // Google#kolimuddin@1999
-console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); // Facebook#rahat@2002
-console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" })); // invalid
-console.log(password({ name: "maisha", birthYear: 2002 })); // invalid
-console.log(password({ birthYear: 2002, siteName: "Facebook" })); // invalid
+console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" })); 
+console.log(password({ name: "rahat", birthYear: 2002, siteName: "Facebook" })); 
+console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }));
+console.log(password({ name: "maisha", birthYear: 2002 })); 
+console.log(password({ birthYear: 2002, siteName: "Facebook" })); 
+
+
+
+
+
+
+
+//     Problem 05 : Monthly Savings of a Freelancer
+
+function monthlySavings(arr, livingCost) {
+
+    if (!Array.isArray(arr) || typeof livingCost !== "number") {
+        return "invalid input";
+    }
+
+    let totalIncome = 0;
+    for (let amount of arr) {
+        if (amount >= 3000) {
+            totalIncome += amount * 0.8; 
+        } else {
+            totalIncome += amount;
+        }
+    }
+
+    let savings = totalIncome - livingCost;
+
+    return savings >= 0 ? savings : "earn more";
+}
+
+console.log(monthlySavings([1000, 2000, 3000], 5400)); 
+console.log(monthlySavings([1000, 2000, 2500], 5000)); 
+console.log(monthlySavings([900, 2700, 3400], 10000)); 
+console.log(monthlySavings(100, [900, 2700, 3400])); 
+console.log(monthlySavings([5000, 2000, 3500], 7000)); 
